@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  compliance-app:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      # Persist Ollama model weights so they survive container restarts
+      - ollama_models:/root/.ollama
+      # Persist the SQLite history database on the host
+      - history_data:/app/data
+    environment:
+      - STREAMLIT_SERVER_HEADLESS=true
+    restart: unless-stopped
+
+volumes:
+  ollama_models:
+  history_data:

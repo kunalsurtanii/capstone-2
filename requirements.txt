@@ -1,0 +1,6 @@
+streamlit
+langgraph
+langchain-ollama
+langchain-community
+langchain-core
+pymupdf
