@@ -12,6 +12,7 @@ services:
       - history_data:/app/data
     environment:
       - STREAMLIT_SERVER_HEADLESS=true
+      - DB_ENCRYPTION_KEY=YOUR_KEY
     restart: unless-stopped
 
 volumes:

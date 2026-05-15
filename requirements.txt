@@ -4,3 +4,4 @@ langchain-ollama
 langchain-community
 langchain-core
 pymupdf
+cryptography
